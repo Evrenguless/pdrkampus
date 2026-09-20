@@ -3,7 +3,7 @@
     // ==========================================
     async function publishToLiveLeaderboard() {
       if (!supabaseClient) {
-        alert("Lütfen Supabase bağlantı anahtarlarınızı kontrol edin.");
+        alert("Canlı sıralama hizmetine şu anda ulaşılamıyor. Lütfen daha sonra tekrar deneyin.");
         return;
       }
 
@@ -97,7 +97,7 @@
       } catch (err) {
         container.innerHTML = `
           <div class="text-center py-6 text-slate-500 text-xs">
-            Canlı sıralama yüklenemedi: ${err.message}
+            Canlı sıralama şu anda yüklenemiyor. Lütfen daha sonra tekrar deneyin.
           </div>
         `;
       }

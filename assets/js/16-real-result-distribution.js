@@ -35,11 +35,11 @@
     const note=document.getElementById('rk-real-dist-note');
     if(realResultDistributionMode==='oabt'){
       if(title) title.textContent='ÖABT Net Dağılımı';
-      if(desc) desc.textContent='Veri tabanındaki geçerli gerçek sonuç belgelerinde ÖABT netlerinin hangi aralıklarda toplandığını gösterir.';
+      if(desc) desc.textContent='Doğrulanmış gerçek sonuç belgelerinde ÖABT netlerinin hangi aralıklarda toplandığını gösterir.';
       if(note) note.textContent='Grafik, kayıtlı geçerli gerçek sonuç belgelerindeki ÖABT netlerini kullanır.';
     }else{
       if(title) title.textContent='Toplam AGS Net Dağılımı';
-      if(desc) desc.textContent='Veri tabanındaki geçerli gerçek sonuç belgelerinde toplam AGS netlerinin hangi aralıklarda toplandığını gösterir.';
+      if(desc) desc.textContent='Doğrulanmış gerçek sonuç belgelerinde toplam AGS netlerinin hangi aralıklarda toplandığını gösterir.';
       if(note) note.textContent='Grafik, kayıtlı geçerli gerçek sonuç belgelerindeki altı AGS testinin toplam netini kullanır.';
     }
     renderRealResultDistribution();
@@ -51,7 +51,7 @@
     const values=getRealResultValues(realResultDistributionMode);
     const countEl=document.getElementById('rk-real-dist-total'); if(countEl) countEl.textContent=P2_VALID_RESULT_COUNT.toLocaleString('tr-TR');
     const desc=document.getElementById('rk-real-dist-desc');
-    if(desc) desc.textContent=realResultDistributionMode==='oabt' ? `Veri tabanındaki ${P2_VALID_RESULT_COUNT} geçerli gerçek sonuç belgesinde ÖABT netlerinin hangi aralıklarda toplandığını gösterir.` : `Veri tabanındaki ${P2_VALID_RESULT_COUNT} geçerli gerçek sonuç belgesinde toplam AGS netlerinin hangi aralıklarda toplandığını gösterir.`;
+    if(desc) desc.textContent=realResultDistributionMode==='oabt' ? `Doğrulanmış ${P2_VALID_RESULT_COUNT} gerçek sonuç belgesinde ÖABT netlerinin hangi aralıklarda toplandığını gösterir.` : `Doğrulanmış ${P2_VALID_RESULT_COUNT} gerçek sonuç belgesinde toplam AGS netlerinin hangi aralıklarda toplandığını gösterir.`;
     const note=document.getElementById('rk-real-dist-note');
     if(note) note.textContent=realResultDistributionMode==='oabt' ? `Grafik, kayıtlı ${P2_VALID_RESULT_COUNT} geçerli gerçek sonuç belgesindeki ÖABT netlerini kullanır.` : `Grafik, kayıtlı ${P2_VALID_RESULT_COUNT} geçerli gerçek sonuç belgesindeki altı AGS testinin toplam netini kullanır.`;
     const max=realResultDistributionMode==='oabt'?50:80;

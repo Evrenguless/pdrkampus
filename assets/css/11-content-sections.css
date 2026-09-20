@@ -49,6 +49,7 @@
 #tab-leaderboard{order:4}
 #tab-historical{order:5}
 #tab-research{order:6}
+#tab-ags{order:7}
 
 @media(min-width:681px){.rk-sidebar{overflow-x:hidden!important;overflow-y:auto!important}}
 
@@ -87,6 +88,7 @@
 #tab-leaderboard{--rk-section-accent:#bd8730;background:linear-gradient(145deg,#fffdf8,#fff8e9)!important}
 #tab-historical{--rk-section-accent:#9b6b2d;background:linear-gradient(145deg,#fffdf8,#fbf3e5)!important}
 #tab-research{--rk-section-accent:#397968;background:linear-gradient(145deg,#fffdf8,#edf7f3)!important}
+#tab-ags{--rk-section-accent:#315f62;background:linear-gradient(145deg,#fffdf8,#edf5f2)!important}
 
 .rk-content-stage>.tab-content>.rk-section-head{
   margin:0 0 5px!important;padding:3px 3px 18px!important;border-bottom:1px solid rgba(24,44,64,.11)!important;

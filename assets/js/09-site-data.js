@@ -1,6 +1,6 @@
     async function loadSiteDatasets() {
       if (!supabaseClient) {
-        console.warn('Supabase istemcisi kurulamadığı için anasayfa verileri yüklenemedi.');
+        console.warn('Veri hizmetine ulaşılamadığı için anasayfa verileri yüklenemedi.');
         return false;
       }
       try {
@@ -26,9 +26,9 @@
         if (typeof window.renderP2SubtestDistributions === 'function') window.renderP2SubtestDistributions();
         return true;
       } catch (error) {
-        console.error('Supabase anasayfa verileri yüklenemedi:', error);
+        console.error('Anasayfa verileri yüklenemedi:', error);
         const table = document.getElementById('rk-historical-table-body');
-        if (table) table.innerHTML = '<tr><td colspan="5">Veriler yüklenemedi. Supabase kurulumunu kontrol edin.</td></tr>';
+        if (table) table.innerHTML = '<tr><td colspan="5">Veriler şu anda yüklenemiyor. Lütfen daha sonra tekrar deneyin.</td></tr>';
         const topicHost = document.getElementById('rk-topic-bars');
         if (topicHost) topicHost.textContent = 'Araştırma verileri yüklenemedi.';
         return false;

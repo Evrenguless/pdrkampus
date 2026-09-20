@@ -3,7 +3,7 @@
     // ==========================================
     async function loginWithGoogle() {
       if (!supabaseClient) {
-        alert("Lütfen Supabase bağlantı anahtarlarınızı kontrol edin.");
+        alert("Giriş hizmetine şu anda ulaşılamıyor. Lütfen daha sonra tekrar deneyin.");
         return;
       }
 

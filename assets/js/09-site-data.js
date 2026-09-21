@@ -84,4 +84,3 @@
       const timeline = document.getElementById('rk-asdep-timeline');
       if (timeline) timeline.innerHTML = asdep.map((item, index) => `<div class="${index === asdep.length - 1 ? 'is-current' : ''}"><b>${item.year}</b><p>${item.note}</p></div>`).join('');
     }
-

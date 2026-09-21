@@ -4,7 +4,7 @@ function rkNavigate(tabId){
   if(!target){ console.warn('PDRkampus: sekme bulunamadı',tabId); return; }
   if(typeof switchTab === 'function') switchTab(tabId);
   document.querySelectorAll('.rk-nav-button').forEach(b=>b.classList.toggle('active',b.dataset.tab===tabId));
-  const labels={'tab-overview':'Kişisel Performans Analizi','tab-simulator':'2027 Senaryo Analizi','tab-matches':'Eşleşen Aday ve Dağılımlar','tab-leaderboard':'Canlı Sıralama ve Net Dağılımları','tab-historical':'PDR Adayı vs Kontenjan','tab-research':'PDR ÖABT & ASDEP Analizi','tab-ags':'2026 AGS Konu Dağılımı'};
+  const labels={'tab-overview':'Kişisel Performans Analizi','tab-simulator':'2027 Senaryo Analizi','tab-matches':'Eşleşen Aday ve Dağılımlar','tab-leaderboard':'Canlı Sıralama ve Net Dağılımları','tab-historical':'PDR Adayı vs Kontenjan','tab-research':'PDR ÖABT & ASDEP Analizi'};
   const el=document.getElementById('rk-current-section'); if(el) el.textContent=labels[tabId]||'Genel Bakış';
   target.classList.remove('hidden');
   requestAnimationFrame(()=>target.scrollIntoView({behavior:'smooth',block:'start'}));

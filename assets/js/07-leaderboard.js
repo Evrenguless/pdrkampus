@@ -97,7 +97,7 @@
       } catch (err) {
         container.innerHTML = `
           <div class="text-center py-6 text-slate-500 text-xs">
-            Canlı sıralama şu anda yüklenemiyor. Lütfen daha sonra tekrar deneyin.
+            Canlı sıralama yüklenemedi: ${err.message}
           </div>
         `;
       }
@@ -199,4 +199,3 @@
         `;
       }).join('');
     }
-

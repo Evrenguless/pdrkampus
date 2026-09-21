@@ -102,4 +102,3 @@
         form.classList.add('hidden');
       }
     }
-

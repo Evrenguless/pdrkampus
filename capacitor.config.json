@@ -1,0 +1,20 @@
+{
+  "appId": "tr.com.pdrkampus.app",
+  "appName": "PDRkampüs",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1800,
+      "launchAutoHide": true,
+      "backgroundColor": "#F7F3E9",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "LIGHT",
+      "backgroundColor": "#F7F3E9"
+    }
+  }
+}

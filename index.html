@@ -4,6 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<meta name="theme-color" content="#252b40"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
 <title>Pdrkampus.com.tr | 2027 AGS PDR Sıralama, Simülasyon &amp; Soru Havuzu</title>
 <!-- Favicon -->
 <link rel="stylesheet" href="assets/css/00-logo-asset.css">
@@ -27,7 +30,7 @@
 
 <link rel="stylesheet" href="assets/css/06-brand-logo.css">
 <link rel="stylesheet" href="assets/css/07-logo-alignment.css">
-<link rel="stylesheet" href="assets/css/13-ags-topic-distribution.css">
+<link rel="stylesheet" href="assets/css/13-mobile-app.css">
 </head>
 <body class="rk-app-body">
 <aside class="rk-sidebar" id="rk-sidebar">
@@ -63,11 +66,6 @@
 <nav aria-label="PDR ÖABT ve ASDEP analizi" class="rk-nav">
 <button class="rk-nav-button" data-tab="tab-research" type="button" onclick="rkNavigate('tab-research')">
 <span class="rk-nav-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.2A2.2 2.2 0 0 1 6.2 3H11v16H6.2A2.2 2.2 0 0 0 4 21.2z"/><path d="M20 5.2A2.2 2.2 0 0 0 17.8 3H13v16h4.8a2.2 2.2 0 0 1 2.2 2.2z"/></svg></span><span class="rk-nav-text">PDR ÖABT &amp; ASDEP</span>
-</button>
-</nav>
-<nav aria-label="2026 AGS konu dağılımı" class="rk-nav">
-<button class="rk-nav-button" data-tab="tab-ags" type="button" onclick="rkNavigate('tab-ags')">
-<span class="rk-nav-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20V10m5.3 10V4m5.4 16v-7m5.3 7V7"/><path d="M2.5 20.5h19"/></svg></span><span class="rk-nav-text">2026 AGS Konu Dağılımı</span>
 </button>
 </nav>
 </aside>
@@ -574,31 +572,6 @@
   <article class="rk-research-card rk-topic-table-card"><div class="rk-card-heading"><div><span>SORU HARİTASI</span><h3>Konu dağılımı ve kapsam ayrıntıları</h3></div><b>Analiz</b></div><div class="rk-topic-table-wrap custom-scrollbar"><table class="rk-topic-table"><thead><tr><th>Ana konu / ders</th><th>Kesin soru sayısı</th><th>Kapsam</th></tr></thead><tbody id="rk-topic-table-body"><tr><td colspan="3">Veriler yükleniyor…</td></tr></tbody></table></div></article>
 </section>
 </div>
-<div class="tab-content flex flex-col gap-4" id="tab-ags">
-<header class="rk-section-head"><div><span>2026 AGS ANALİZİ</span><h2>AGS Konu Dağılımı</h2><p>2026 MEB-AGS sınavındaki 80 sorunun test ve konu ağırlıklarını grafik ve tablo üzerinden incele.</p></div><b>07</b></header>
-<section class="rk-ags-shell" id="rk-ags-topic-analysis" aria-labelledby="rk-ags-title">
-  <div class="rk-ags-hero">
-    <div><span class="rk-ags-kicker">2026 MEB-AGS · 80 SORU</span><h3 id="rk-ags-title">Test ve konu ağırlıkları</h3><p>Sözel ve sayısal yetenekten eğitim bilimleri ile mevzuata kadar sınavın konu yapısını karşılaştırmalı olarak keşfet.</p></div>
-    <span class="rk-ags-badge">SINAV ANALİZİ</span>
-  </div>
-  <div class="rk-ags-overview">
-    <article class="rk-ags-stat"><span>Toplam kapsam</span><strong>6 test</strong><small>80 sorunun tamamı sınıflandırıldı</small></article>
-    <article class="rk-ags-stat"><span id="rk-ags-selected-label">Toplam soru</span><strong id="rk-ags-selected-total">80</strong><small>2026 AGS kitapçığı</small></article>
-    <article class="rk-ags-stat rk-ags-stat-wide"><span id="rk-ags-leading-label">En yoğun test</span><strong id="rk-ags-leading-topic">Eğitim Bilimleri ve TMES</strong><small>Seçime göre otomatik güncellenir</small></article>
-  </div>
-  <div class="rk-ags-switch" id="rk-ags-test-switch" role="tablist" aria-label="AGS test seçimi"></div>
-  <div class="rk-ags-grid">
-    <article class="rk-ags-card">
-      <div class="rk-ags-card-head"><div><span>GRAFİK</span><h3 id="rk-ags-view-title">Testlere göre soru dağılımı</h3><p id="rk-ags-view-subtitle">2026 AGS’deki 80 sorunun altı teste göre dağılımını karşılaştır.</p></div><b>Soru sayısı</b></div>
-      <div class="rk-ags-chart-wrap"><canvas id="rkAgsTopicChart"></canvas></div>
-    </article>
-    <article class="rk-ags-card">
-      <div class="rk-ags-card-head"><div><span>DAĞILIM TABLOSU</span><h3>Konu ağırlıkları</h3><p>Soru sayıları ve seçili alan içindeki yüzdelik paylar.</p></div><b>2026</b></div>
-      <div class="rk-ags-table-wrap custom-scrollbar"><table class="rk-ags-table"><thead><tr><th id="rk-ags-table-first-head">Test</th><th>Soru</th><th>Pay</th></tr></thead><tbody id="rk-ags-topic-table-body"></tbody></table></div>
-    </article>
-  </div>
-</section>
-</div>
 </section></main>
 <!-- 📱 MOBİL İÇİN YAPIŞKAN ALT BİLGİ PİLİ -->
 <!-- 🌟 FOOTER -->
@@ -626,7 +599,6 @@
         <a href="#tab-leaderboard" onclick="rkNavigate('tab-leaderboard');return false;">Canlı Sıralama</a>
         <a href="#tab-historical" onclick="rkNavigate('tab-historical');return false;">PDR Adayı vs Kontenjan</a>
         <a href="#tab-research" onclick="rkNavigate('tab-research');return false;">PDR ÖABT &amp; ASDEP</a>
-        <a href="#tab-ags" onclick="rkNavigate('tab-ags');return false;">2026 AGS Konu Dağılımı</a>
       </nav>
 
       <nav class="rk-footer-column rk-footer-legal" aria-label="Yasal ve yardımcı bağlantılar">
@@ -684,7 +656,7 @@
 
 <script src="assets/js/20-historical-charts.js"></script>
 <script src="assets/js/21-content-flow.js"></script>
-<script src="assets/js/22-ags-topic-distribution.js"></script>
+<script src="assets/js/22-mobile-app.js"></script>
 </body>
 </html>
 <link rel="stylesheet" href="assets/css/10-overview-dashboard.css">

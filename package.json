@@ -1,0 +1,31 @@
+{
+  "name": "pdrkampus-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PDRkampüs web ve mobil uygulaması",
+  "scripts": {
+    "web:prepare": "node scripts/prepare-web.mjs",
+    "android:add": "npm run web:prepare && npx cap add android",
+    "android:sync": "npm run web:prepare && npx cap sync android",
+    "android:open": "npm run android:sync && npx cap open android",
+    "android:assets": "capacitor-assets generate --android --assetPath resources",
+    "android:apk": "npm run android:sync && cd android && ./gradlew assembleDebug",
+    "ios:add": "npm run web:prepare && npx cap add ios",
+    "ios:sync": "npm run web:prepare && npx cap sync ios",
+    "ios:open": "npm run ios:sync && npx cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/app": "^7.1.0",
+    "@capacitor/browser": "^7.0.2",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/ios": "^7.4.3",
+    "@capacitor/splash-screen": "^7.0.3",
+    "@capacitor/status-bar": "^7.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.4.3",
+    "sharp": "^0.35.4"
+  }
+}

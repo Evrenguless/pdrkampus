@@ -100,6 +100,16 @@
 .rk-eyebrow{font-size:9px!important;letter-spacing:.16em!important;font-weight:800!important}
 .rk-intro h1{font-size:34px!important;margin-top:6px!important;color:#123044!important}
 .rk-intro p{font-size:13px!important;margin-top:9px!important;max-width:650px}
+.rk-intro-copy{position:relative;z-index:1;max-width:790px}
+.rk-intro-note{display:flex;align-items:center;gap:7px;margin-top:15px;color:#61727b;font-size:10px;font-weight:700}
+.rk-intro-note span{color:#4c9f95;font-size:8px}
+.rk-intro-summary{position:relative;z-index:1;flex:0 0 360px;padding:15px;border:1px solid rgba(49,95,98,.14);border-radius:17px;background:rgba(255,255,255,.72);box-shadow:0 8px 24px rgba(24,44,64,.05)}
+.rk-intro-summary-title{display:flex;align-items:center;gap:7px;margin-bottom:10px;color:#60747b;font:800 9px "Space Mono",monospace;letter-spacing:.12em}
+.rk-intro-summary-title span{width:7px;height:7px;border-radius:50%;background:#4c9f95;box-shadow:0 0 0 4px rgba(76,159,149,.12)}
+.rk-intro-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.rk-intro-feature-grid>div{display:flex;align-items:center;gap:9px;min-width:0;padding:10px;border:1px solid rgba(24,44,64,.08);border-radius:12px;background:#fffdf8}
+.rk-intro-feature-grid strong{flex:0 0 auto;color:#2f897b;font:800 15px "Space Mono",monospace}
+.rk-intro-feature-grid span{color:#54636d;font-size:9px;font-weight:700;line-height:1.25}
 .rk-date-pill{
   position:relative;z-index:1;background:#fff!important;border-radius:999px!important;
   padding:10px 14px!important;border-color:rgba(24,44,64,.08)!important;
@@ -147,6 +157,10 @@
   .rk-main{padding:16px 14px 42px!important}
   .rk-intro{padding:19px!important;min-height:0;border-radius:17px!important}
   .rk-intro h1{font-size:27px!important}
+  .rk-intro p{line-height:1.65}
+  .rk-intro-summary{width:100%;margin-top:17px;padding:12px;box-sizing:border-box}
+  .rk-intro-feature-grid>div{padding:9px}
+  .rk-intro-note{margin-top:12px;line-height:1.45}
   .rk-date-pill{display:none}
 }
 
@@ -192,4 +206,3 @@
 @media(max-width:680px){
  .rk-calc-panel > div:first-child, .rk-calc-panel > div:nth-child(2){border-radius:18px!important}
 }
-

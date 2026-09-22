@@ -1,6 +1,7 @@
 (function(){
   'use strict';
   let profileChart=null;
+  let distributionChart=null;
   const tests=[
     {key:'sozel',label:'Sözel',max:15},
     {key:'sayisal',label:'Sayısal',max:15},
@@ -56,6 +57,48 @@
       }
     });
   }
+  function drawDistributionChart(nets){
+    const canvas=document.getElementById('rkPersonalDistributionChart');
+    if(!canvas||typeof Chart==='undefined')return;
+    const values=tests.map(t=>Math.max(0,Number(nets[t.key]||0)));
+    const total=values.reduce((sum,value)=>sum+value,0);
+    const hasData=total>0;
+    if(distributionChart)distributionChart.destroy();
+    distributionChart=new Chart(canvas,{
+      type:'doughnut',
+      data:{
+        labels:hasData?tests.map(t=>t.label):['Netlerini gir'],
+        datasets:[{
+          data:hasData?values:[1],
+          backgroundColor:hasData?['#2f9184','#63aaa0','#d4a23d','#5b759e','#86b7a9','#e17c68','#17364a']:['#e6ebe7'],
+          borderColor:'#fffdf8',borderWidth:3,hoverOffset:5
+        }]
+      },
+      plugins:[{
+        id:'rkPersonalDistributionCenter',
+        afterDraw(chart){
+          const meta=chart.getDatasetMeta(0);
+          if(!meta?.data?.[0])return;
+          const {x,y}=meta.data[0];
+          const ctx=chart.ctx;
+          ctx.save();
+          ctx.textAlign='center';ctx.textBaseline='middle';
+          ctx.fillStyle='#17364a';ctx.font='800 18px "Space Mono", monospace';
+          ctx.fillText(total.toFixed(2).replace('.',','),x,y-5);
+          ctx.fillStyle='#7d898f';ctx.font='700 9px "Plus Jakarta Sans", sans-serif';
+          ctx.fillText('toplam net',x,y+15);
+          ctx.restore();
+        }
+      }],
+      options:{
+        responsive:true,maintainAspectRatio:false,cutout:'66%',animation:{duration:350},
+        plugins:{
+          legend:{position:'bottom',labels:{boxWidth:8,boxHeight:8,usePointStyle:true,pointStyle:'circle',padding:11,color:'#53666f',font:{size:9,weight:'600'}}},
+          tooltip:{callbacks:{label:(ctx)=>{const value=Number(ctx.raw||0);const share=total?value/total*100:0;return ctx.label+': '+value.toFixed(2).replace('.',',')+' net (%'+share.toFixed(1).replace('.',',')+')';}}}
+        }
+      }
+    });
+  }
   function updatePersonalDashboard(){
     const root=document.getElementById('rk-personal-dashboard');
     if(!root)return;
@@ -86,6 +129,7 @@
     const avg=entered?normalized.reduce((s,x)=>s+x.ratio,0)/normalized.length:0;
     setText('rk-pa-level',entered?(avg>=.7?'Hedefe çok yakın':avg>=.45?'Dengeli ilerliyor':'Gelişime açık'):'Analiz için veri bekleniyor');
     drawProfileChart(nets);
+    drawDistributionChart(nets);
   }
   function scheduleUpdate(){clearTimeout(scheduleUpdate.t);scheduleUpdate.t=setTimeout(updatePersonalDashboard,220)}
   document.addEventListener('DOMContentLoaded',()=>{

@@ -50,3 +50,10 @@
 .rk-pa-empty-note{margin:0 17px 16px;padding:10px 12px;border:1px dashed #d7d8d1;border-radius:11px;background:#faf8f2;color:#7d878c;font-size:9px;line-height:1.5}
 @media(max-width:980px){.rk-pa-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.rk-pa-layout,.rk-pa-bottom{grid-template-columns:1fr}.rk-pa-score-body{grid-template-columns:auto minmax(180px,1fr);justify-items:center}}
 @media(max-width:620px){.rk-pa-welcome{display:block;padding:17px}.rk-pa-live{display:inline-flex;margin-top:13px}.rk-pa-kpis{grid-template-columns:1fr 1fr;gap:8px}.rk-pa-kpi{padding:14px}.rk-pa-kpi strong{font-size:19px}.rk-pa-layout,.rk-pa-bottom{gap:10px}.rk-pa-chart-box{height:225px;padding:9px}.rk-pa-score-body{grid-template-columns:1fr}.rk-pa-ring{width:138px;height:138px}.rk-pa-bar-row{grid-template-columns:72px minmax(60px,1fr) 38px}.rk-pa-card-head{padding:15px}.rk-pa-bars{padding:15px}.rk-pa-welcome h3{font-size:23px}}
+
+/* Kişisel analiz · ders netlerinin daire dağılımı */
+.rk-pa-distribution-card{display:flex;flex-direction:column}
+.rk-pa-donut-wrap{height:282px;padding:14px 16px 4px;position:relative}
+.rk-pa-donut-wrap canvas{width:100%!important;height:100%!important;max-width:100%!important}
+.rk-pa-donut-note{margin:4px 17px 16px;padding:9px 11px;border:1px dashed #d7d8d1;border-radius:11px;background:#faf8f2;color:#7d878c;font-size:8px;line-height:1.5}
+@media(max-width:620px){.rk-pa-donut-wrap{height:260px;padding:12px 10px 2px}}

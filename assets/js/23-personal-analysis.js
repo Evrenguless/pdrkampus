@@ -15,7 +15,10 @@
     return value||fallback;
   };
   const numberFrom=(value)=>{
-    const match=String(value||'').replace(/\./g,'').replace(',','.').match(/-?\d+(?:\.\d+)?/);
+    let cleaned=String(value||'').replace(/[^0-9,.-]/g,'');
+    if(cleaned.includes(',')) cleaned=cleaned.replace(/\./g,'').replace(',','.');
+    else if((cleaned.match(/\./g)||[]).length>1) cleaned=cleaned.replace(/\./g,'');
+    const match=cleaned.match(/-?\d+(?:\.\d+)?/);
     return match?Number(match[0]):0;
   };
   const currentNets=()=>{

@@ -39,6 +39,7 @@
 .rk-signature-video video{display:block;width:100%;height:auto;aspect-ratio:720/404;object-fit:cover}
 @media(max-width:640px){.rk-signature-video{padding-bottom:20px}.rk-signature-video-frame{width:min(100%,340px);border-radius:15px}}
 </style>
+<link rel="stylesheet" href="assets/css/15-animated-hero.css?v=20260922-1">
 </head>
 <body class="rk-app-body">
 <aside class="rk-sidebar" id="rk-sidebar">
@@ -114,23 +115,24 @@
 </div></header>
 <!-- ANA İÇERİK ALANI -->
 <main class="rk-main">
-<div class="rk-intro">
-<div class="rk-intro-copy">
-<div class="rk-eyebrow">PDRKAMPÜS · 2027 SINAV ANALİZ PLATFORMU</div>
-<h1>AGS ve PDR ÖABT hazırlığını verilerle yönet.</h1>
-<p>Netlerini gir; tahmini P2 puanını ve başarı sıralaması aralığını gör. Gerçek aday sonuçlarını, sınav senaryolarını, konu dağılımlarını ve kontenjan geçmişini tek çalışma alanında incele.</p>
-<div class="rk-intro-note"><span aria-hidden="true">●</span> Kişisel verilerin ve güncel analizlerin aynı panelde.</div>
-</div>
-<div class="rk-intro-summary" aria-label="PDRkampüs özellikleri">
-<div class="rk-intro-summary-title"><span aria-hidden="true"></span> TEK PANELDE</div>
-<div class="rk-intro-feature-grid">
-<div><strong>P2</strong><span>Puan tahmini</span></div>
-<div><strong>2027</strong><span>Sıralama tahmini</span></div>
-<div><strong>119+</strong><span>Gerçek sonuç</span></div>
-<div><strong>AGS</strong><span>Konu dağılımı</span></div>
-</div>
-</div>
-</div>
+<section class="rk-intro rk-animated-hero" aria-labelledby="rk-animated-hero-title">
+  <div class="rk-animated-orbit rk-animated-orbit-left" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="rk-animated-orbit rk-animated-orbit-right" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="rk-animated-hero-content">
+    <div class="rk-animated-brand" aria-label="PDRkampüs">
+      <span class="rk-site-logo rk-animated-brand-logo" aria-hidden="true"></span>
+      <span class="rk-animated-brand-name"><strong>PDR</strong><b>kampüs</b></span>
+    </div>
+    <h1 id="rk-animated-hero-title">Başarını <span id="rk-animated-hero-word" aria-live="polite">analiz et</span></h1>
+    <p>AGS ve PDR ÖABT netlerini gir; P2 tahminini, olası sıralamanı ve kişisel performansını tek ekranda gör.</p>
+    <div class="rk-animated-word-track" aria-hidden="true">
+      <span data-rk-hero-word="ölç">ölç</span><i>•</i>
+      <span class="is-active" data-rk-hero-word="analiz et">analiz et</span><i>•</i>
+      <span data-rk-hero-word="karşılaştır">karşılaştır</span><i>•</i>
+      <span data-rk-hero-word="geliştir">geliştir</span>
+    </div>
+  </div>
+</section>
 <section class="rk-workspace"><div class="rk-calc-panel">
 <!-- MEB-AGS Kartı -->
 <div class="bg-slate-900/80 backdrop-blur-xl border border-slate-800/80 rounded-3xl p-4 shadow-xl">
@@ -736,6 +738,7 @@
 <script src="assets/js/21-content-flow.js?v=20260921-2"></script>
 <script src="assets/js/22-ags-topic-distribution.js"></script>
 <script src="assets/js/22-mobile-app.js"></script>\n<script src="assets/js/23-personal-analysis.js?v=20260922-3"></script>
+<script src="assets/js/24-animated-hero.js?v=20260922-1"></script>
 </body>
 </html>
 <link rel="stylesheet" href="assets/css/10-overview-dashboard.css?v=20260921-3">

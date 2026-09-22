@@ -32,6 +32,13 @@
 <link rel="stylesheet" href="assets/css/07-logo-alignment.css">
 <link rel="stylesheet" href="assets/css/13-ags-topic-distribution.css">
 <link rel="stylesheet" href="assets/css/13-mobile-app.css">\n<link rel="stylesheet" href="assets/css/14-personal-analysis.css?v=20260922-3">
+
+<style id="rk-signature-video-style">
+.rk-signature-video{display:flex;justify-content:center;padding:0 0 26px}
+.rk-signature-video-frame{width:min(100%,420px);margin:0;border:1px solid rgba(24,72,78,.16);border-radius:18px;overflow:hidden;background:#071315;box-shadow:0 16px 38px rgba(11,43,47,.14)}
+.rk-signature-video video{display:block;width:100%;height:auto;aspect-ratio:720/404;object-fit:cover}
+@media(max-width:640px){.rk-signature-video{padding-bottom:20px}.rk-signature-video-frame{width:min(100%,340px);border-radius:15px}}
+</style>
 </head>
 <body class="rk-app-body">
 <aside class="rk-sidebar" id="rk-sidebar">
@@ -671,6 +678,15 @@
         <a href="#yasal-uyari" data-legal="legal">Yasal Uyarı</a>
         <a href="#iletisim" data-legal="contact">İletişim</a>
       </nav>
+    </div>
+
+
+    <div class="rk-signature-video" aria-label="PDRkampüs dijital imzası">
+      <figure class="rk-signature-video-frame">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="PDRkampüs animasyonlu dijital imzası">
+          <source src="assets/media/pdrkampus-signature.mp4" type="video/mp4">
+        </video>
+      </figure>
     </div>
 
     <div class="rk-footer-bottom">

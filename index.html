@@ -31,7 +31,7 @@
 <link rel="stylesheet" href="assets/css/06-brand-logo.css">
 <link rel="stylesheet" href="assets/css/07-logo-alignment.css">
 <link rel="stylesheet" href="assets/css/13-ags-topic-distribution.css">
-<link rel="stylesheet" href="assets/css/13-mobile-app.css">
+<link rel="stylesheet" href="assets/css/13-mobile-app.css">\n<link rel="stylesheet" href="assets/css/14-personal-analysis.css?v=20260922-1">
 </head>
 <body class="rk-app-body">
 <aside class="rk-sidebar" id="rk-sidebar">
@@ -298,7 +298,38 @@
 </div>
 </div></div></section>
 <section class="rk-content-stage"><div class="tab-content flex flex-col gap-4" id="tab-overview">
-<header class="rk-section-head"><div><span>GENEL BAKIŞ</span><h2>Kişisel performans analizi</h2><p>Ders bazındaki durumunu, ortalamaya göre konumunu ve net başına olası katkıyı incele.</p></div><b>01</b></header>
+<header class="rk-section-head"><div><span>GENEL BAKIŞ</span><h2>Kişisel performans analizi</h2><p>Ders bazındaki durumunu, ortalamaya göre konumunu ve net başına olası katkıyı incele.</p></div><b>01</b></header>\n<div class="rk-personal-dashboard" id="rk-personal-dashboard">
+  <section class="rk-pa-welcome">
+    <div><span class="rk-pa-kicker">KİŞİSEL ANALİZ · CANLI PROFİL</span><h3>Merhaba, <span id="rk-pa-name">Aday</span>.</h3><p>Girdiğin netlerden oluşturulan güncel performans özetini tek ekranda incele.</p></div>
+    <div class="rk-pa-live"><i aria-hidden="true"></i> GÜNCEL VERİLERİN</div>
+  </section>
+  <section class="rk-pa-kpis" aria-label="Kişisel performans özeti">
+    <article class="rk-pa-kpi"><div class="rk-pa-kpi-head"><span class="rk-pa-kpi-icon"><svg viewBox="0 0 24 24"><path d="M4 19V9m5 10V5m5 14v-7m5 7V3"/></svg></span>Toplam AGS neti</div><strong id="rk-pa-ags">0,00</strong><small>Altı AGS testinin toplamı</small></article>
+    <article class="rk-pa-kpi"><div class="rk-pa-kpi-head"><span class="rk-pa-kpi-icon"><svg viewBox="0 0 24 24"><path d="M6 3h12v18H6zM9 8h6m-6 4h6m-6 4h4"/></svg></span>ÖABT neti</div><strong id="rk-pa-oabt">0,00</strong><small>PDR alan sınavı performansı</small></article>
+    <article class="rk-pa-kpi"><div class="rk-pa-kpi-head"><span class="rk-pa-kpi-icon"><svg viewBox="0 0 24 24"><path d="M8 4h8v3a4 4 0 0 1-8 0zM6 5H3v2a4 4 0 0 0 5 4m10-6h3v2a4 4 0 0 1-5 4m-4 0v5m-4 4h8m-6-4h4"/></svg></span>Tahmini P2</div><strong id="rk-pa-p2">--</strong><small>Mevcut hesaplama sonucundan</small></article>
+    <article class="rk-pa-kpi"><div class="rk-pa-kpi-head"><span class="rk-pa-kpi-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M2.5 20a5.5 5.5 0 0 1 11 0m-3 0a5.5 5.5 0 0 1 11 0"/></svg></span>Tahmini sıra</div><strong id="rk-pa-rank">--</strong><small>2026 sonuçlarıyla eşleşen görünüm</small></article>
+  </section>
+  <section class="rk-pa-layout">
+    <article class="rk-pa-card"><div class="rk-pa-card-head"><div><span>PERFORMANS EĞRİSİ</span><h4>Ders bazında net profili</h4><p>Her testte ulaştığın netin test kapasitesine oranı.</p></div><b class="rk-pa-card-tag">CANLI</b></div><div class="rk-pa-chart-box"><canvas id="rkPersonalProfileChart"></canvas></div></article>
+    <article class="rk-pa-card"><div class="rk-pa-card-head"><div><span>PUAN GÖRÜNÜMÜ</span><h4>Tahmini P2 özeti</h4><p>Mevcut sonuç ekranındaki değerlerin.</p></div></div><div class="rk-pa-score-body"><div class="rk-pa-ring" id="rk-pa-ring"><div class="rk-pa-ring-content"><strong id="rk-pa-ring-value">--</strong><span>Tahmini P2</span></div></div><div class="rk-pa-score-list"><div><span>Eşleşen sıra</span><strong id="rk-pa-ring-rank">--</strong></div><div><span>Veri kaynağı</span><strong>Mevcut hesaplama</strong></div></div></div></article>
+  </section>
+  <section class="rk-pa-bottom">
+    <article class="rk-pa-card"><div class="rk-pa-card-head"><div><span>DERS KARŞILAŞTIRMASI</span><h4>Ders bazında performans</h4><p>Netlerini testlerin azami soru sayısına göre karşılaştır.</p></div><b class="rk-pa-card-tag">NET</b></div><div class="rk-pa-bars">
+      <div class="rk-pa-bar-row"><span>Sözel</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="sozel"></div></div><b id="rk-pa-bar-sozel">0,00</b></div>
+      <div class="rk-pa-bar-row"><span>Sayısal</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="sayisal"></div></div><b id="rk-pa-bar-sayisal">0,00</b></div>
+      <div class="rk-pa-bar-row"><span>Tarih</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="tarih"></div></div><b id="rk-pa-bar-tarih">0,00</b></div>
+      <div class="rk-pa-bar-row"><span>Coğrafya</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="cografya"></div></div><b id="rk-pa-bar-cografya">0,00</b></div>
+      <div class="rk-pa-bar-row"><span>Eğitim</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="egitim"></div></div><b id="rk-pa-bar-egitim">0,00</b></div>
+      <div class="rk-pa-bar-row" data-key="mevzuat"><span>Mevzuat</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="mevzuat"></div></div><b id="rk-pa-bar-mevzuat">0,00</b></div>
+      <div class="rk-pa-bar-row"><span>ÖABT</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="oabt"></div></div><b id="rk-pa-bar-oabt">0,00</b></div>
+    </div></article>
+    <article class="rk-pa-card"><div class="rk-pa-card-head"><div><span>KİŞİSEL ÖZET</span><h4>Profilinden öne çıkanlar</h4><p>Net dağılımına göre kısa çalışma görünümü.</p></div></div><div class="rk-pa-insights">
+      <div class="rk-pa-insight"><span class="rk-pa-insight-icon">✦</span><div><span>En güçlü alan</span><strong id="rk-pa-strongest">Netlerini girdikten sonra belirlenecek</strong></div></div>
+      <div class="rk-pa-insight"><span class="rk-pa-insight-icon">↗</span><div><span>Genel görünüm</span><strong id="rk-pa-level">Analiz için veri bekleniyor</strong></div></div>
+      <div class="rk-pa-insight"><span class="rk-pa-insight-icon">◎</span><div><span>Öncelikli alan</span><strong id="rk-pa-priority">Netlerini girdikten sonra belirlenecek</strong></div></div>
+    </div><p class="rk-pa-empty-note">Bu kartlar yalnızca girdiğin netleri ve mevcut PDRkampüs hesaplama sonuçlarını görselleştirir; puan formülünü değiştirmez.</p></article>
+  </section>
+</div>
 <div class="bg-slate-900/80 border border-slate-800/80 rounded-3xl p-4 shadow-xl">
 <div class="flex justify-between items-center mb-2 pb-1.5 border-b border-slate-800">
 <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider">🕸️ Başarı Profili Radar Grafiği</h4>
@@ -691,7 +722,7 @@
 <script src="assets/js/20-historical-charts.js"></script>
 <script src="assets/js/21-content-flow.js?v=20260921-2"></script>
 <script src="assets/js/22-ags-topic-distribution.js"></script>
-<script src="assets/js/22-mobile-app.js"></script>
+<script src="assets/js/22-mobile-app.js"></script>\n<script src="assets/js/23-personal-analysis.js?v=20260922-1"></script>
 </body>
 </html>
 <link rel="stylesheet" href="assets/css/10-overview-dashboard.css?v=20260921-3">

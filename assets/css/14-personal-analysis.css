@@ -1,3 +1,15 @@
+/* Bu panel, mevcut iki sütunlu analiz ızgarasında tam genişlikte kalır. */
+#tab-overview > #rk-personal-dashboard{
+  grid-column:1 / -1!important;
+  width:100%!important;
+  max-width:100%!important;
+  padding:0!important;
+  overflow:visible!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
 /* PDRkampüs · Kişisel Analiz kart sistemi */
 .rk-personal-dashboard{display:grid;gap:16px}
 .rk-pa-welcome{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding:20px 22px;border:1px solid var(--rk-line,#e4ddd0);border-radius:19px;background:linear-gradient(115deg,#fffdf8 0%,#fbf7ef 70%,#edf6f3 100%);box-shadow:0 8px 24px rgba(24,44,64,.045)}

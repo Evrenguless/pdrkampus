@@ -40,8 +40,39 @@
 @media(max-width:640px){.rk-signature-video{padding-bottom:20px}.rk-signature-video-frame{width:min(100%,340px);border-radius:15px}}
 </style>
 <link rel="stylesheet" href="assets/css/15-animated-hero.css?v=20260922-1">
+<link rel="stylesheet" href="assets/css/16-welcome-overlay.css?v=20260923-1">
 </head>
-<body class="rk-app-body">
+<body class="rk-app-body rk-welcome-pending">
+<section class="rk-welcome-overlay" id="rk-welcome-overlay" role="dialog" aria-modal="true" aria-labelledby="rk-welcome-title">
+  <div class="rk-welcome-orbit rk-welcome-orbit-left" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="rk-welcome-orbit rk-welcome-orbit-right" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="rk-welcome-shell">
+    <div class="rk-welcome-brand" aria-label="PDRkampüs">
+      <span class="rk-site-logo rk-welcome-logo" aria-hidden="true"></span>
+      <span class="rk-welcome-wordmark"><strong>PDR</strong><b>kampüs</b></span>
+    </div>
+    <div class="rk-welcome-kicker">AGS <i>•</i> PDR ÖABT <i>•</i> KİŞİSEL ANALİZ</div>
+    <h1 id="rk-welcome-title">Başarını yalnızca görme.<em>analiz et</em></h1>
+    <p class="rk-welcome-description">AGS ve PDR ÖABT netlerini gir; P2 tahminini, olası sıralamanı ve kişisel analizlerini tek çalışma alanında gör.</p>
+    <div class="rk-welcome-features" aria-label="PDRkampüs özellikleri">
+      <article>
+        <span class="rk-welcome-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V11M12 19V5M19 19V8"/></svg></span>
+        <div><h2>P2 Puan Tahmini</h2><p>Kişisel puan aralığını gör.</p></div>
+      </article>
+      <article>
+        <span class="rk-welcome-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM15.5 10a3 3 0 1 0 0-6M2.5 20v-2.2c0-2.8 2.6-4.8 6-4.8s6 2 6 4.8V20M15 13.5c3.5 0 6 1.8 6 4.5v2"/></svg></span>
+        <div><h2>Gerçek Aday Verileri</h2><p>Sonuçlarını doğrulanmış verilerle karşılaştır.</p></div>
+      </article>
+      <article>
+        <span class="rk-welcome-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5c2.8-.8 5.4-.3 8 1.5v13c-2.6-1.8-5.2-2.3-8-1.5zM20 5.5c-2.8-.8-5.4-.3-8 1.5v13c2.6-1.8 5.2-2.3 8-1.5z"/></svg></span>
+        <div><h2>Konu Analizleri</h2><p>Çalışma yönünü keşfet.</p></div>
+      </article>
+    </div>
+    <button class="rk-welcome-enter" id="rk-welcome-enter" type="button">Panele Başla <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg></button>
+    <p class="rk-welcome-note">Giriş yapmadan da inceleyebilirsin.</p>
+  </div>
+</section>
+
 <aside class="rk-sidebar" id="rk-sidebar">
 <div class="rk-brand">
 <span class="rk-site-logo rk-site-logo-sidebar" aria-hidden="true"></span>
@@ -739,6 +770,7 @@
 <script src="assets/js/22-ags-topic-distribution.js"></script>
 <script src="assets/js/22-mobile-app.js"></script>\n<script src="assets/js/23-personal-analysis.js?v=20260922-3"></script>
 <script src="assets/js/24-animated-hero.js?v=20260922-1"></script>
+<script src="assets/js/25-welcome-overlay.js?v=20260923-1"></script>
 </body>
 </html>
 <link rel="stylesheet" href="assets/css/10-overview-dashboard.css?v=20260921-3">

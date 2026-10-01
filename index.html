@@ -81,7 +81,7 @@
 </section>
 
 <aside class="rk-sidebar" id="rk-sidebar">
-<a class="rk-brand rk-brand-link" href="/" aria-label="PDR Analiz ana sayfasına git">
+<a class="rk-brand rk-brand-link" href="https://pdrkampus.com/" aria-label="PDR Kampüs ana sayfasına git">
 <span class="rk-site-logo rk-site-logo-sidebar" aria-hidden="true"></span>
 <div class="rk-brand-name">PDR<span>kampüs</span></div>
 </a>
@@ -122,7 +122,7 @@
 </nav>
 <nav aria-label="PDR Kampüs ana platformu" class="rk-nav rk-main-platform-nav">
 <a class="rk-nav-button rk-main-platform-link" href="https://pdrkampus.com/" aria-label="PDR Kampüs ana platformuna git">
-<span class="rk-nav-icon rk-main-platform-logo" aria-hidden="true"><img src="assets/img/pdrkampus-logo.png" alt=""></span>
+<span class="rk-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 10.5 12 3.4l8.5 7.1v9.1a1.4 1.4 0 0 1-1.4 1.4H4.9a1.4 1.4 0 0 1-1.4-1.4z"/><path d="M9 21v-6.7h6V21"/></svg></span>
 <span class="rk-nav-text">PDR Kampüs'e Git</span>
 </a>
 </nav>
@@ -132,7 +132,7 @@
 <header class="rk-topbar">
 <div class="rk-topbar-left">
 <button aria-expanded="false" aria-label="Menüyü aç" class="rk-icon-button rk-mobile-menu" id="rk-mobile-menu" type="button"><span>☰</span></button>
-<a class="rk-header-brand rk-brand-link" href="/" aria-label="PDR Analiz ana sayfasına git">
+<a class="rk-header-brand rk-brand-link" href="https://pdrkampus.com/" aria-label="PDR Kampüs ana sayfasına git">
   <span class="rk-site-logo rk-site-logo-header" aria-hidden="true"></span>
   <span class="rk-header-brand-text"><span class="rk-header-brand-pdr">PDR</span><span class="rk-header-brand-kampus">kampüs</span></span>
 </a>
@@ -363,41 +363,21 @@
     <article class="rk-pa-kpi"><div class="rk-pa-kpi-head"><span class="rk-pa-kpi-icon"><svg viewBox="0 0 24 24"><path d="M8 4h8v3a4 4 0 0 1-8 0zM6 5H3v2a4 4 0 0 0 5 4m10-6h3v2a4 4 0 0 1-5 4m-4 0v5m-4 4h8m-6-4h4"/></svg></span>Tahmini P2</div><strong id="rk-pa-p2">--</strong><small>Mevcut hesaplama sonucundan</small></article>
     <article class="rk-pa-kpi"><div class="rk-pa-kpi-head"><span class="rk-pa-kpi-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M2.5 20a5.5 5.5 0 0 1 11 0m-3 0a5.5 5.5 0 0 1 11 0"/></svg></span>Tahmini sıra</div><strong id="rk-pa-rank">--</strong><small>2026 sonuçlarıyla eşleşen görünüm</small></article>
   </section>
-  <section class="rk-pa-analysis-grid">
-    <article class="rk-pa-card rk-pa-story-card">
-      <div class="rk-pa-card-head"><div><span>PROFİL YORUMU</span><h4>Sonucun ne anlatıyor?</h4><p>Girdiğin netlerin kendi test kapasitelerine ve mevcut referans veriye göre kısa yorumu.</p></div><b class="rk-pa-card-tag">CANLI</b></div>
-      <div class="rk-pa-story">
-        <div class="rk-pa-story-lead"><span id="rk-pa-level">Analiz için veri bekleniyor</span><strong id="rk-pa-story-title">Netlerini girdikten sonra profil yorumun burada görünecek.</strong><p id="rk-pa-story-copy">Bu alan puan formülünü değiştirmez; yalnızca mevcut sonuçlarını yorumlar.</p></div>
-        <div class="rk-pa-story-points">
-          <div><span>En güçlü alan</span><strong id="rk-pa-strongest">—</strong><small id="rk-pa-strongest-note">Test kapasitesine göre</small></div>
-          <div><span>Öncelikli alan</span><strong id="rk-pa-priority">—</strong><small id="rk-pa-priority-note">Gelişim potansiyeli en yüksek alan</small></div>
-          <div><span>AGS–ÖABT dengesi</span><strong id="rk-pa-balance">—</strong><small id="rk-pa-balance-note">Mevcut net dağılımına göre</small></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="rk-pa-card rk-pa-reference-card">
-      <div class="rk-pa-card-head"><div><span>REFERANS KARŞILAŞTIRMASI</span><h4>Gerçek sonuçlara göre konumun</h4><p>Mevcut veri havuzundaki aday ortalamalarıyla netlerini karşılaştır.</p></div><b class="rk-pa-card-tag" id="rk-pa-reference-count">VERİ</b></div>
-      <div class="rk-pa-compare-list" id="rk-pa-compare-list">
-        <p class="rk-pa-empty-note">Referans veriler yükleniyor…</p>
-      </div>
-    </article>
+  <section class="rk-pa-layout">
+    <article class="rk-pa-card"><div class="rk-pa-card-head"><div><span>PERFORMANS EĞRİSİ</span><h4>Ders bazında net profili</h4><p>Her testte ulaştığın netin test kapasitesine oranı.</p></div><b class="rk-pa-card-tag">CANLI</b></div><div class="rk-pa-chart-box"><canvas id="rkPersonalProfileChart"></canvas></div></article>
+    <article class="rk-pa-card"><div class="rk-pa-card-head"><div><span>PUAN GÖRÜNÜMÜ</span><h4>Tahmini P2 özeti</h4><p>Mevcut sonuç ekranındaki değerlerin.</p></div></div><div class="rk-pa-score-body"><div class="rk-pa-ring" id="rk-pa-ring"><div class="rk-pa-ring-content"><strong id="rk-pa-ring-value">--</strong><span>Tahmini P2</span></div></div><div class="rk-pa-score-list"><div><span>Eşleşen sıra</span><strong id="rk-pa-ring-rank">--</strong></div><div><span>Veri kaynağı</span><strong>Mevcut hesaplama</strong></div></div></div></article>
   </section>
-
-  <section class="rk-pa-card rk-pa-next-card">
-    <div class="rk-pa-card-head"><div><span>SONRAKİ HAMLE</span><h4>Analizden aksiyona geç</h4><p>Aynı verileri tekrar göstermek yerine mevcut sonucunun hangi bölümünü inceleyebileceğini öne çıkarıyoruz.</p></div><b class="rk-pa-card-tag">YÖNLENDİRME</b></div>
-    <div class="rk-pa-next-body">
-      <div class="rk-pa-next-summary">
-        <span>Mevcut görünüm</span>
-        <strong><span id="rk-pa-next-p2">--</span> P2 · <span id="rk-pa-next-rank">--</span></strong>
-        <p id="rk-pa-next-copy">Netlerini girdikten sonra öncelikli gelişim alanın burada özetlenecek.</p>
-      </div>
-      <div class="rk-pa-next-metrics">
-        <div><span>Yüzdelik dilim</span><strong id="rk-pa-percentile">--</strong></div>
-        <div><span>Referansa göre en büyük fark</span><strong id="rk-pa-largest-gap">--</strong></div>
-      </div>
-      <button type="button" class="rk-pa-next-button" onclick="document.getElementById('rk-marginal-p2')?.scrollIntoView({behavior:'smooth',block:'start'})">1 net etkisini senaryoda incele</button>
-    </div>
+  <section class="rk-pa-bottom">
+    <article class="rk-pa-card"><div class="rk-pa-card-head"><div><span>DERS KARŞILAŞTIRMASI</span><h4>Ders bazında performans</h4><p>Netlerini testlerin azami soru sayısına göre karşılaştır.</p></div><b class="rk-pa-card-tag">NET</b></div><div class="rk-pa-bars">
+      <div class="rk-pa-bar-row"><span>Sözel</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="sozel"></div></div><b id="rk-pa-bar-sozel">0,00</b></div>
+      <div class="rk-pa-bar-row"><span>Sayısal</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="sayisal"></div></div><b id="rk-pa-bar-sayisal">0,00</b></div>
+      <div class="rk-pa-bar-row"><span>Tarih</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="tarih"></div></div><b id="rk-pa-bar-tarih">0,00</b></div>
+      <div class="rk-pa-bar-row"><span>Coğrafya</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="cografya"></div></div><b id="rk-pa-bar-cografya">0,00</b></div>
+      <div class="rk-pa-bar-row"><span>Eğitim</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="egitim"></div></div><b id="rk-pa-bar-egitim">0,00</b></div>
+      <div class="rk-pa-bar-row" data-key="mevzuat"><span>Mevzuat</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="mevzuat"></div></div><b id="rk-pa-bar-mevzuat">0,00</b></div>
+      <div class="rk-pa-bar-row"><span>ÖABT</span><div class="rk-pa-bar-track"><div class="rk-pa-bar-fill" data-key="oabt"></div></div><b id="rk-pa-bar-oabt">0,00</b></div>
+    </div></article>
+    <article class="rk-pa-card rk-pa-distribution-card"><div class="rk-pa-card-head"><div><span>NET DAĞILIMI</span><h4>Netlerinin derslere dağılımı</h4><p>Her dersin toplam netin içindeki payını karşılaştır.</p></div><b class="rk-pa-card-tag">CANLI</b></div><div class="rk-pa-donut-wrap"><canvas id="rkPersonalDistributionChart"></canvas></div><p class="rk-pa-donut-note">Grafik yalnızca girdiğin netleri görselleştirir; puan ve sıralama hesaplamasını değiştirmez.</p></article>
   </section>
 </div>
 <div class="bg-slate-900/80 border border-slate-800/80 rounded-3xl p-4 shadow-xl">

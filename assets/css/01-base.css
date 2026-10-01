@@ -417,3 +417,25 @@ body.rk-app-body{
   #auth-header-container #btn-login span:first-of-type{display:none}
   .rk-topbar .rk-topbar-actions{gap:5px}
 }
+
+
+/* Ana PDR Kampüs platformuna geçiş */
+.rk-main-platform-nav{
+  margin-top:auto!important;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+.rk-main-platform-link{
+  text-decoration:none!important;
+  color:#f7f3e9!important;
+  background:rgba(47,137,123,.18)!important;
+  border:1px solid rgba(101,170,158,.28)!important;
+}
+.rk-main-platform-link:hover{
+  background:#2f897b!important;
+  color:#fff!important;
+  transform:translateX(2px);
+}
+.rk-main-platform-link .rk-nav-icon svg{
+  width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;
+}

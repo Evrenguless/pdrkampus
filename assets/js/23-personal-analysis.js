@@ -134,10 +134,10 @@
   function scheduleUpdate(){clearTimeout(scheduleUpdate.t);scheduleUpdate.t=setTimeout(updatePersonalDashboard,220)}
   document.addEventListener('DOMContentLoaded',()=>{
     document.querySelectorAll('#sozel-d,#sozel-y,#sayisal-d,#sayisal-y,#tarih-d,#tarih-y,#cografya-d,#cografya-y,#egitim-d,#egitim-y,#mevzuat-d,#mevzuat-y,#oabt-d,#oabt-y').forEach(el=>el.addEventListener('input',scheduleUpdate));
-    ['result-p2-score','result-2026-rank','result-rank-range','user-name'].forEach(id=>{
+    ['result-p2-score','result-2026-rank','result-rank-range','user-name','net-sozel','net-sayisal','net-tarih','net-cografya','net-egitim','net-mevzuat','net-oabt','total-ags-net-badge','rk-p2','rk-rank'].forEach(id=>{
       const el=document.getElementById(id);if(el)new MutationObserver(scheduleUpdate).observe(el,{childList:true,subtree:true,characterData:true});
     });
-    setTimeout(updatePersonalDashboard,450);
+    [250,650,1200,2200,4000].forEach(ms=>setTimeout(updatePersonalDashboard,ms));
   });
   window.updatePersonalDashboard=updatePersonalDashboard;
 })();

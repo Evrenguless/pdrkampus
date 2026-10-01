@@ -439,3 +439,16 @@ body.rk-app-body{
 .rk-main-platform-link .rk-nav-icon svg{
   width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;
 }
+
+
+/* Marka bağlantıları */
+.rk-brand-link{
+  color:inherit!important;
+  text-decoration:none!important;
+  cursor:pointer;
+}
+.rk-brand-link:focus-visible{
+  outline:2px solid #65aa9e;
+  outline-offset:4px;
+  border-radius:10px;
+}

@@ -452,3 +452,21 @@ body.rk-app-body{
   outline-offset:4px;
   border-radius:10px;
 }
+
+
+.rk-main-platform-logo{
+  width:32px!important;
+  min-width:32px!important;
+  height:32px;
+  display:grid!important;
+  place-items:center;
+  border-radius:9px;
+  overflow:hidden;
+  background:rgba(255,255,255,.08);
+}
+.rk-main-platform-logo img{
+  width:24px;
+  height:24px;
+  object-fit:contain;
+  display:block;
+}

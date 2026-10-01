@@ -60,7 +60,7 @@
       body: `
         <div class="rk-legal-text">
           <p>Görüş, hata bildirimi veya yasal talepleriniz için PDR Kampüs iletişim kanalını kullanabilirsiniz.</p>
-          <p><strong>Web:</strong> pdrkampus.com.tr</p>
+          <p><strong>Web:</strong> <a href="https://pdrkampus.com/" target="_blank" rel="noopener noreferrer">pdrkampus.com</a></p>
         </div>`
     }
   };

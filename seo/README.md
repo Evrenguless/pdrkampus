@@ -27,3 +27,14 @@ Başlangıç hash kaydı korunur. Kullanıcının devam/düzeltme talebiyle yap�
 Ana sitenin aynı resmî dosyaya işaret eden katalog kayıtları kaynak verisi değiştirilmeden tek görünür kartta gruplanır. Kayıt kimlikleri ve diğer başlıklar korunur. `catalogue-aliases.json` yalnız denetlenmiş ortak dosya gruplarını tanımlar; yeni ve denetlenmemiş tekrarlar katalog oluşturma/test aşamasında hata verir. Özel üye dosyaları gruplanmaz.
 
 İsteğe bağlı komut adları `seo/package.json` içinde tanımlıdır; `seo/` dizininde `npm run seo:audit -- --output /tmp/yeni-cikti` kullanılabilir. Üretim komutu yine `--dry-run` gerektirir.
+
+## Analiz içerik pilotu
+
+`analysis-pilot.json` altı ayrı arama niyeti için editoryal içerik taşır: ÖABT rehberi, 2026 istatistikleri, puan, sıralama, tarihsel kontenjanlar ve konu analizi. Mevcut veri kayıtlarından alınan değerler değiştirilmez. Doğrulama metaverisi iç denetim içindir; sayfalarda kişisel teyit veya veritabanı ayrıntıları gösterilmez. ÖSYM belge bağlantıları görünür kaynak olarak sunulur.
+
+```sh
+python scripts/build_analysis_pilot.py generate --dry-run --output /tmp/pdr-analysis-preview
+python -m unittest discover -s scripts -p 'test_analysis_pilot.py'
+```
+
+Çıktı uygulama dizini dışında, yeni bir dizine yazılır. Sayfalar `noindex,follow` önizlemeleridir. Komut canlı HTML, sitemap, hesaplama modeli, kimlik doğrulama veya veritabanına yazmaz. Yapısal puan arama sıralaması veya indekslenme garantisi değildir. Yayın için önizlemeler ayrı değerlendirilir.

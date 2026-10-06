@@ -3,14 +3,14 @@
   "edits": {
     "index.html": {
       "baseline_sha256": "baae5a4d6a97ec97687b5d57e530823898fd5e22d50c0dc7d882286cbbfa2454",
-      "reviewed_sha256": "b018744536603ea683bc761676459aad3af4915ec1cc84b75fc503d9ec63183a",
-      "reason": "Reviewed SEO/content/catalogue display correction; source records and calculation logic preserved",
+      "reviewed_sha256": "b484f39976faa35d0e5997f80a3c7786e47c272028f952c3364762ba72dd2dea",
+      "reason": "User-authorized publication: editorial route discovery and sitemap; calculation and data preserved",
       "runtime_sha256": "70d829a97a7ad1d9365fa63182b4344027b3ff5137137ce5b2c59c87cd501dbf"
     },
     "sitemap.xml": {
       "baseline_sha256": "3b9540a17e9faec0c35bcff94839da057f498281aceda7d5953a366c837f7d25",
-      "reviewed_sha256": "fe069a006685850febe7288e340eac1a0d6f2590ade57ec4c4a40a4d3e20b8d3",
-      "reason": "Reviewed SEO/content/catalogue display correction; source records and calculation logic preserved"
+      "reviewed_sha256": "6a299f84117ed1320d5e60aad9a43d9b4fee915f27a3cb0dcab0aa134d28d975",
+      "reason": "User-authorized publication: editorial route discovery and sitemap; calculation and data preserved"
     }
   }
 }
